@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+  }
+
+  img {
+      max-width: 100%;
+      display: block;
+  }
+
+
+  /* style header with the logo  */
+  
+  .logo {
+    font-size: 200%;
+    padding: 100px 20px;
+    margin: 0 auto;
+    max-width: 100%;
+    background-image: url('images/bgimage.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px #808080;
+    font-weight: bolder;
+  }
+  
+  .grid {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 980px;
+    display: grid;
+    grid-gap: 20px;
+  }
+  
+/* style nav  */
+
+  nav {
+    background-color: #3f6bad;
+    padding: .5em;
+    position: sticky; /* this makes nav stuck at the top of the page when the user scrolls down */
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-bottom: 20px;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: .5em 1em;
+    text-transform: uppercase;
+  }
+
+  nav a:hover {
+    color: #ff6207;
+    text-shadow: 0.5px 0.5px floralwhite;
+  }
+  
+
+  /* Split columns to place images */
+  .photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    grid-gap: 1px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, 1fr);
+    
+  }
+
+  .feature {
+      width: 200px;
+  }
+
+  article img {
+    float: left; /* this makes the image surrounded by paragraphs */
+    margin-right: 20px;
+  }
+
+  article {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  
+  aside {
+    grid-row: 1;
+    grid-column-start: 5;
+  }
